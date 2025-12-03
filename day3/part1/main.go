@@ -8,10 +8,10 @@ import (
 
 func main() {
 	f, err := os.Open("input.txt")
-	// f, err := os.Open("test_input.txt")
 	if err != nil {
 		panic(err)
 	}
+	defer f.Close()
 
 	scanner := bufio.NewScanner(f)
 

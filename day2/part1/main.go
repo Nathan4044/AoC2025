@@ -10,7 +10,6 @@ import (
 
 func main() {
 	ranges := parseRanges("input.txt")
-	// ranges := parseRanges("test_input.txt")
 
 	count := 0
 	for _, r := range ranges {
@@ -30,6 +29,7 @@ func parseRanges(filename string) []pair {
 	if err != nil {
 		panic(err)
 	}
+	defer f.Close()
 	
 	data, err := io.ReadAll(f)
 	if err != nil {

@@ -8,7 +8,6 @@ import (
 )
 
 func main() {
-	// file, err := os.Open("test_input.txt")
 	file, err := os.Open("input.txt")
 	if err != nil {
 		panic("can't open file")
