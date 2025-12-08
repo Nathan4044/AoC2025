@@ -42,6 +42,7 @@ func parseInput(filename string) [][]byte {
 	if err != nil {
 		panic(err)
 	}
+	defer f.Close()
 
 	lines := [][]byte{}
 

@@ -68,6 +68,7 @@ func rotateInput(filename string) []string {
 	if err != nil {
 		panic(err)
 	}
+	defer f.Close()
 
 	lines := [][]byte{}
 
